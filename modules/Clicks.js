@@ -21,11 +21,6 @@ const ClickSchema = new Schema({
     ref: "Urls",
     require: true,
   },
-  user_id: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-    require: true,
-  },
 });
 
 module.exports = mongoose.model("Clicks", ClickSchema);

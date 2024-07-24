@@ -57,7 +57,6 @@ const getUrl = async (req, res) => {
 };
 
 const getLongUrl = async (req, res) => {
-  const { user_id } = req.locals;
   const _id = req.params.url_id;
 
   try {

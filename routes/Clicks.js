@@ -8,7 +8,7 @@ const {
 
 const app = express();
 
-app.post("/storeClicks", Auth, storeClicks);
+app.post("/storeClicks", storeClicks);
 
 app.get("/getAllClicks", Auth, getClicksForUrls);
 

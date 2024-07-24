@@ -1,16 +1,13 @@
 const Clicks = require("../modules/Clicks");
 
 const storeClicks = async (req, res) => {
-  const user_id = req.locals.user_id;
   const { url_id, city, country, device } = req.body;
-
   try {
     const cliksObj = new Clicks({
       url_id: url_id,
       city: city,
       country: country,
       device: device,
-      user_id: user_id,
     });
     await cliksObj.save();
     return res.status(201).json({
